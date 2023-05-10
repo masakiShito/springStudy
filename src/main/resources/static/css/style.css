@@ -1,0 +1,126 @@
+/* 共通設定*/
+body {
+  background-color: #f1f1f1;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* ボタンの設定（submit）*/
+button[type='submit'] {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type='submit']:hover {
+  background-color: #45a049;
+}
+
+/* h1タグのスタイル設定*/
+h1 {
+  text-align: center;
+  color: #333333;
+  font-size: 24px; /* メニュータイトルのフォントサイズを調整 */
+}
+
+/* テキストおよびパスワードに対する設定*/
+input[type='text'],
+input[type='password'] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  box-sizing: border-box; /* 追加された行 */
+}
+
+/* リスト関連のスタイル設定*/
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+/* リンクのスタイル設定*/
+a {
+  display: block;
+  padding: 20px; /* メニュー項目のパディングを調整 */
+  background-color: #4caf50;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+  font-size: 18px; /* メニューテキストのフォントサイズを調整 */
+}
+
+a:hover {
+  background-color: #45a049;
+}
+@keyframes scale-in {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ログイン画面*/
+.login-container {
+  background-color: #ffffff;
+  width: 500px;
+  padding: 100px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: scale-in 0.5s ease-in-out;
+}
+
+/* メニュー画面*/
+.menu-container {
+  background-color: #ffffff;
+  width: 400px; /* メニューの幅を調整 */
+  padding: 100px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: scale-in 0.5s ease-in-out;
+}
+
+/* ログアウト画面*/
+.logout-container {
+  background-color: #ffffff;
+  width: 500px;
+  padding: 100px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: scale-in 0.5s ease-in-out;
+}
+
+.logout-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #45a049;
+}
