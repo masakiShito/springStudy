@@ -250,3 +250,31 @@ li {
 .cancel-button:hover {
   background-color: #45a049;
 }
+
+/* 課題作成*/
+.issues-text,
+.issues-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.issues-textarea {
+  height: 120px;
+}
+
+.issues-label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* 課題詳細画面*/
+.issues-detail-p {
+  font-size: 16px;
+  line-height: 1.5;
+}

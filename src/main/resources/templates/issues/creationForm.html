@@ -1,28 +1,60 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      th:replace="~{fragments/layout :: layout(~{::title}, ~{::body})}">
-<head>
-    <title>課題作成 | 課題管理アプリケーション</title>
-</head>
-<body>
-<h1 class="mt-3">課題作成</h1>
-<form action="#" th:action="@{/issues}" th:method="post" th:object="${issueForm}">
-    <div class="mt-3">
-        <label for="summaryInput" class="form-label">概要</label>
-        <input type="text" id="summaryInput" th:field="*{summary}" class="form-control"
-               th:classappend="${#fields.hasErrors('summary')} ? is-invalid">
-        <p class="invalid-feedback" th:if="${#fields.hasErrors('summary')}" th:errors="*{summary}">(error)</p>
-    </div>
-    <div class="mt-3">
-        <label for="descriptionInput" class="form-label">説明</label>
-        <textarea id="descriptionInput" row="10" th:field="*{description}" class="form-control"
-                  th:classappend="${#fields.hasErrors('description')} ? is-invalid"></textarea>
-        <p class="invalid-feedback" th:if="${#fields.hasErrors('description')}" th:errors="*{description}">(error)</p>
-    </div>
-    <div class="mt-3">
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  th:fragment="layout(title, content)"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      th:href="@{/css/style.css}"
+      href="../../static/css/style.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>課題作成</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>課題作成</h1>
+      <form
+        action="#"
+        th:action="@{/issues}"
+        th:method="post"
+        th:object="${issueForm}"
+      >
+        <label for="summaryInput" class="issues-label">概要</label>
+        <input
+          type="text"
+          id="summaryInput"
+          th:field="*{summary}"
+          class="issue-text"
+          th:classappend="${#fields.hasErrors('summary')} ? is-invalid"
+        />
+        <p th:if="${#fields.hasErrors('summary')}" th:errors="*{summary}">
+          (error)
+        </p>
+        <label for="descriptionInput" class="issues-label">説明</label>
+        <textarea
+          id="descriptionInput"
+          class="issues-textarea"
+          row="10"
+          th:field="*{description}"
+          th:classappend="${#fields.hasErrors('description')} ? is-invalid"
+        ></textarea>
+        <p
+          class="invalid-feedback"
+          th:if="${#fields.hasErrors('description')}"
+          th:errors="*{description}"
+        >
+          (error)
+        </p>
         <button type="submit" class="btn btn-primary">作成</button>
-        <a href="./list.html" th:href="@{/issues}" class="btn btn-secondary">キャンセル</a>
+        <a href="./list.html" th:href="@{/issues}" class="menu-link"
+          >キャンセル</a
+        >
+      </form>
     </div>
-</form>
-</body>
+  </body>
 </html>
