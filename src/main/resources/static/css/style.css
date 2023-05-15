@@ -56,6 +56,20 @@ input[type='password'] {
   box-sizing: border-box; /* 追加された行 */
 }
 
+input[type='radio'] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+input[type='radio'] {
+  display: inline-block;
+  margin-right: 10px;
+}
+
 /* リスト関連のスタイル設定*/
 ul {
   list-style-type: none;
@@ -204,4 +218,35 @@ li {
 .styled-table tbody td:last-child {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+/* ユーザ登録画面*/
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.label-form {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.cancel-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background-color: #45a049;
 }
